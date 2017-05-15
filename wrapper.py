@@ -33,7 +33,7 @@ class GymWrapper(object):
 
 
   def _step(self, action): #this function should take in the action, perform that action and then return the resultant image
-    assert type(action) == np.ndarray, 'action must be a nd-array' #what is step, what is actions?
+    assert type(action) == np.ndarray, 'action must be a nd-array'
     self.env.step(action)
     obs    = output(action)  #just directly call the output function here, instead of self._observation(action) 
     reward = self.env.reward()
